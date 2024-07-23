@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Hanken Grotesk", sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    font-family: "Montserrat", sans-serif;
+}
+
+main.product-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 768px) {
+        max-width: 325px;
+        margin: 2rem 0;
+    }
+
+    .container {
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 465px;
+        border-radius: 1rem;
+
+        @media (max-width: 768px) {
+            max-width: 325px;
+            flex-direction: column;
+            height: 100%;
+        }
+    
+        .img-container {
+            background: url(../images/image-product-desktop.jpg) no-repeat center center/cover;
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+
+            @media (max-width: 768px) {
+                background: url(../images/image-product-mobile.jpg) no-repeat center center/cover;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 1rem;
+            }
+        }
+    
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            width: 578px;
+            padding: 3rem;
+
+            @media (max-width: 768px) {
+                max-width: 325px;
+            }
+    
+            h1 {
+                font-size: 1.4rem;
+                color: hsl(228, 12%, 48%);
+                margin-bottom: 2rem;
+                text-transform: uppercase;
+                letter-spacing: .5rem;
+                font-weight: 700;
+            }
+    
+            h2 {
+                font-family: "Fraunces", serif;
+                font-size: 4rem;
+                line-height: 4rem;
+                margin-bottom: 2rem;
+                font-weight: 700;
+            }
+    
+            p {
+                font-size: 1.4rem;
+                color: hsl(228, 12%, 48%);
+                font-weight: 500;
+                line-height: 2.2rem;
+                margin-bottom: 2rem;
+            }
+    
+            .price {
+                margin-bottom: 2rem;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+    
+                span {
+                    font-family: "Fraunces", serif;
+                    font-size: 4rem;
+                    color: hsl(158, 36%, 37%);
+                    font-weight: 700;
+                    padding-right: 1rem;
+                }
+    
+                del {
+                    font-size: 1.4rem;
+                    color: hsl(228, 12%, 48%);
+                    font-weight: 500;
+                }
+            }
+    
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.4rem;
+                background-color: hsl(158, 36%, 37%);
+                color: hsl(0, 0%, 100%);
+                font-weight: 500;
+                border: none;
+                padding: 1.5rem;
+                border-radius: .7rem;
+    
+                span {
+                    font-size: 1.4rem;
+                }
+    
+                img {
+                    padding-right: 1rem;
+                }
+    
+                &:hover {
+                    cursor: pointer;
+                    background-color: hsl(212, 21%, 14%);
+                }
+    
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.attribution { 
+    font-size: 1rem; 
+    text-align: center; 
+    padding-bottom: 1rem;
+    
+    a { 
+        color: hsl(158, 36%, 37%); 
+    }
+
+}
